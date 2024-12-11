@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Porfolio Abel Gutiérrez</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+	<!-- FUENTE PLAYFAIR
+	// <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 400 to 900
+
+.playfair-display-<uniquifier> {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+} -->
+
+<!-- FUENTE POPPINS
+.poppins-thin {
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.poppins-extralight {
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.poppins-light {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.poppins-regular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.poppins-medium {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.poppins-semibold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.poppins-bold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.poppins-extrabold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.poppins-black {
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.poppins-thin-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.poppins-extralight-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  font-style: italic;
+}
+
+.poppins-light-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.poppins-regular-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.poppins-medium-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.poppins-semibold-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.poppins-bold-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.poppins-extrabold-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-style: italic;
+}
+
+.poppins-black-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+}
+ -->
+	<style type="text/css">
+		body{
+			background-color: #54098d;
+			font-family:"Playfair Display", serif;
+		}
+
+		html{
+			scroll-behavior: smooth;
+		}
+
+		/*	NAVBAR	*/
+		.navbar {
+  			transition: top 0.3s; /* Transición suave para mostrar/ocultar el navbar */
+  			background-color: #54098d;
+  			font-size: 30px;
+		}
+
+		.navbar li{
+			margin-left: 50px;
+/*	CAMBIAR EN EL RESPONSIVE		*/
+		}
+
+		.navbar-brand{
+			margin-right:20px;
+			margin-left:40px;
+		}
+		/*	FIN NAVBAR	*/
+
+		/* BARRA DE PROGRESO */
+    #progress-bar-container {
+      position: fixed;
+      top: 120px;
+      left: 0;
+      width: 100%;
+      height: 5px;
+      background-color: #e9ecef;
+      z-index: 1030;
+      transition: top 0.3s;
+    }
+
+    #progress-bar {
+      width: 0%;
+      height: 100%;
+      background-color: #711c83;
+    }
+		/*  FIN BARRA DE PROGRESO  */
+
+		/*	HEADER	*/
+		.header {
+			margin-top: 100px;
+    	position: relative;
+    	width: 100%;
+    	height: 90vh;
+		}
+
+		.header h1{
+			font-size: 70px;
+		}
+
+		.header p{
+			font-size: 30px;
+		}
+
+		.header video {
+    	position: absolute;
+    	top: 0;
+    	left: 0;
+    	width: 100%;
+    	height: 100%;
+    	object-fit: cover; /* Asegura que el video cubra toda el área del div */
+		}
+
+		.contenido {
+    	position: absolute;
+   		top: 50%;
+    	left: 80%;
+    	transform: translate(-50%, -50%);
+    	color: white;
+    	text-align: center;   
+		}
+		/*	FIN HEADER	*/
+
+		/*	SOBRE MI	*/
+		.sobremi{
+			height: 110vh;
+			background-image: url("Renders comprimidos/fondo-min.png");
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+			box-shadow: 0 80px 70px black;
+		}
+
+		.bio{
+			height: 80vh;
+			border-radius:80px;
+			border:5px solid #141414;
+		}
+
+		.bio h1{
+			font-family:"Playfair Display", serif ;
+			font-size: 50px;
+			margin-left: 20px;
+		}
+
+		.bio p{
+			font-family:"Poppins";
+			margin-left: 20px;
+		}
+
+		.fotoperfil{
+			margin-left: 50px;
+			width:80%;
+			border:5px solid black;
+			box-shadow: 0px 0px 80px #8DCBE5;
+		}
+		/*	FIN SOBRE MI	*/
+
+		/*	HABILIDADES	*/
+		.habilidades{
+			height: 50vh;
+			background-color: #330245;
+		}
+
+    .bubbles-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      gap: 20px;
+      width: 80%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* Contenedor de cada burbuja */
+    .bubble-container {
+      position: relative;
+      width: 100px;
+      height: 100px;
+/*   CAMBIAR ESTO EN EL RESPONSIVE   */
+    }
+
+    /* Estilo de la burbuja */
+    .bubble {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      overflow: hidden;
+      background: #818181;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Estilo del logo dentro de la burbuja */
+    .bubble-logo {
+      position: absolute;
+      z-index: 2;
+      width: 50%;
+    }
+
+    /* Estilo del líquido dentro de la burbuja */
+    .liquid {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 0%;
+      background: #CF28FF;
+      transition: height 1s ease-in-out;
+      clip-path: polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%);
+      overflow: hidden;
+    }
+
+    /* Animación de ola marítima */
+    @keyframes ocean-wave {
+      0% {
+        transform: translateX(-50%) translateY(0);
+      }
+      50% {
+        transform: translateX(0) translateY(-10px);
+      }
+      100% {
+        transform: translateX(-50%) translateY(0);
+      }
+    }
+
+    /* Estilo de la ola dentro del líquido */
+    .liquid-wave {
+      position: absolute;
+      width: 200%;
+      height: 30px; /* Altura de la ola */
+      background: rgba(255, 255, 255, 0.2);
+      animation: ocean-wave 3s infinite ease-in-out;
+      top: -10px; 
+      border-radius: 50%;
+    }
+		/*	FIN HABILIDADES	*/
+
+		/*	PROYECTOS	*/
+		.proyectos{
+			background-color: #350A51;
+		}
+
+		.proyectos h1{
+			color: white;
+		}
+
+		.marcosyoutube{
+			margin-bottom:50px;
+		}
+		/*	FIN DE PROYECTOS	*/
+
+		/*	FOOTER	*/
+		.formularios{
+			background-color: #1C1C1C;
+		}
+		.form-group{
+			padding: 0;
+			display: inline-block;
+		}
+
+		.enviarformulario{
+			margin-bottom: 50px;
+		}
+
+		footer {
+      background-color: black;
+      color: white;
+      padding: 20px 0;
+    }
+
+    .footer-icons {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .footer-icons i {
+      font-size: 2rem;
+      color:white;
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    .footer-icons i:hover {
+      transform: scale(1.2);
+      color: #350a51;
+    }
+
+    footer p{
+    	margin-top:20px;
+    	text-align: center;
+    }
+		/*	FIN FOOTER	*/
+
+		/*	TAMAÑOS	*/
+
+		@media (max-width:1475px){
+			.contenido {
+    	position: absolute;
+   		top: 50%;
+    	left: 60%;
+    	transform: translate(-50%, -50%);
+    	color: white;
+    	text-align: center;   
+			}
+
+			.navbar li{
+			margin-left: 40px;
+			}
+
+			.bio{
+			height: 82vh;
+			border-radius:80px;
+			border:5px solid #141414;
+			}
+
+			.bio h1{
+			font-family:"Playfair Display", serif ;
+			font-size: 50px;
+				margin-left: 20px;
+			}
+
+			.bio p{
+			font-family:"Poppins";
+			margin-left: 20px;
+			}
+
+			.bubbles-container {
+      gap: 15px;
+    	}
+
+			.bubble-container {
+      width: 80px;
+      height: 80px;
+    	}
+		}
+
+		@media (max-width:1200px){
+			.contenido {
+    	position: absolute;
+   		top: 50%;
+    	left: 50%;
+    	transform: translate(-50%, -50%);
+    	color: white;
+    	text-align: center;   
+			}
+
+			.navbar li{
+			margin-left: 30px;
+			}
+
+			.bio{
+			height: 82vh;
+			border-radius:80px;
+			border:5px solid #141414;
+			}
+
+			.bio h1{
+			font-family:"Playfair Display", serif ;
+			font-size: 40px;
+			margin-left: 0;
+			}
+
+			.bio p{
+			font-family:"Poppins";
+			margin-left: 0;
+			}
+
+			.bubbles-container {
+      gap: 30px;
+    	}
+
+			.bubble-container {
+      width: 130px;
+      height: 130px;
+    	}
+		}
+
+		@media (max-width: 992px){
+			.contenido {
+    	position: absolute;
+   		top: 50%;
+    	left: 50%;
+    	transform: translate(-50%, -50%);
+    	color: white;
+    	text-align: center;   
+			}
+
+			.bio{
+			height: 82vh;
+			border-radius:80px;
+			border:5px solid #141414;
+			}
+
+			.bio h1{
+			font-family:"Playfair Display", serif ;
+			font-size: 35px;
+			margin-left:0;
+			}
+
+			.bio p{
+			font-family:"Poppins";
+			margin-left: 0;
+			}
+
+			.bubbles-container {
+      gap: 15px;
+    	}
+
+			.bubble-container {
+      width: 120px;
+      height: 120px;
+    	}
+		}
+
+		@media (max-width:853px){
+			.bubbles-container {
+      gap: 15px;
+    	}
+
+			.bubble-container {
+      width: 100px;
+      height: 100px;
+    	}
+
+    	.bio h1{
+			font-family:"Playfair Display", serif ;
+			font-size: 30px;
+			margin-left:0;
+			}
+
+			.bio p{
+			font-family:"Poppins";
+			font-size: 14px;
+			margin-left: 0;
+			}
+		}
+
+		@media (max-width:768px){
+			.bubbles-container {
+      gap: 15px;
+    	}
+
+			.bubble-container {
+      width: 90px;
+      height: 90px;
+    	}
+		}
+
+		@media (max-width:673px){
+			.bubbles-container {
+      gap: 10px;
+    	}
+
+			.bubble-container {
+      width: 85px;
+      height: 85px;
+    	}
+
+    	.bio h1{
+			font-family:"Playfair Display", serif ;
+			font-size: 25px;
+			margin-left:0;
+			}
+
+			.bio p{
+			font-family:"Poppins";
+			font-size: 12px;
+			margin-left: 0;
+			}
+
+			.fotoperfil{
+			margin-left: 0;
+			width:100%;
+			}
+		}
+
+		@media (max-width: 444px){
+			.bio h1{
+			font-family:"Playfair Display", serif ;
+			font-size: 20px;
+			margin-left:0;
+			}
+
+			.bio p{
+			font-family:"Poppins";
+			font-size: 10px;
+			margin-left: 0;
+			}
+
+			.fotoperfil{
+			margin-left: 0;
+			width:100%;
+			}
+		}
+
+		}
+	</style>
+</head>
+<body>
+	<!-- NAV -->
+	<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="navbar">
+	  <a class="navbar-brand" href="#header"><img src="recursos/Logo chico .gif" alt="" width="60px"></a>
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+	    <span class="navbar-toggler-icon"></span>
+	  </button>
+
+	  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+	    <ul class="navbar-nav ml-auto">
+	      <li class="nav-item">
+	        <a class="nav-link" href="#header">Inicio</a>
+	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link" href="#sobremi">Sobre mí</a>
+	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link" href="#skills">Habilidades</a>
+	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link" href="#proyects">Proyectos</a>
+	      </li>
+				<li class="nav-item">
+	        <a class="nav-link" href="#contact">Contacto</a>
+	      </li>
+	    </ul>
+	  </div>
+	</nav>
+	<!-- FIN NAV -->
+
+	<!-- Barra de progreso -->
+  <div id="progress-bar-container">
+    <div id="progress-bar"></div>
+  </div>
+  <!-- FIN BARRA DE PROGRESO -->
+
+	<!-- HEADER -->
+	<div id="header" class="header">
+		<video autoplay loop muted>
+    	<source src="Renders comprimidos/Video Fondo.mp4" type="video/mp4">
+		</video>
+		<div class="contenido">
+    	<!-- Aquí puedes agregar el contenido que quieras mostrar sobre el video -->
+    	<h1>ABEL GUTIÉRREZ</h1>
+    	<p>Programador y diseñador 3D</p>
+		</div>
+	</div>
+	<!-- FIN HEADER -->
+
+	<!-- PRIMERA SECCION -->
+	<div class="fondosobremi container-fluid">
+			<div class="row">
+				<div id="sobremi" class="sobremi col-12 d-flex align-items-center justify-content-center">
+					<div class="bio col-sm-10 col-md-9 col-lg-8 col-xl-7 bg-light d-flex align-items-center justify-content-center">
+						<div class="col-6">
+							<h1 class="text-center mb-4">SOBRE MÍ</h1>
+							<p class="text-justify">Soy un joven de 19 años apasionado por el mundo de la animación 3D y el desarrollo de videojuegos. Recientemente he completado mis estudios en el Grado Superior de Animación 3D, videojuegos y entornos interactivos en el IES Tierno Galván de Alcalá de Guadaíra, donde desarrollé habilidades en modelado 3D, texturizado, programación de videojuegos y animación. Durante mi formación, trabajé en proyectos que me permitieron combinar creatividad y tecnología para dar vida a mis ideas.
+							Me considero una persona con sentido del humor, comprometida y con ganas de seguir aprendiendo y creciendo en el ámbito de la programación. Mi objetivo es formar parte de un equipo donde pueda aportar mi visión y continuar perfeccionando mis habilidades en este emocionante campo.</p>
+						</div>
+						<div class="col-6">
+							<img class="fotoperfil rounded-circle" src="Renders comprimidos/FOTO PORFOLIO.png" alt="FOTO DE MI CARA">
+						</div>
+					</div>
+				</div>
+			</div>
+	</div>
+	<!-- FIN PRIMERA SECCION -->
+
+	<!-- SEGUNDA SECCION SKILLS -->
+	<div class="container-fluid">
+			<div class="row">
+				<div id="skills" class="habilidades col-12 d-flex align-items-center justify-content-center">
+					<div class="col-10 d-flex align-items-center justify-content-center">
+						  <div class="bubbles-container">
+						    <!-- Burbuja 1 -->
+						    <div class="bubble-container">
+						      <div class="bubble" data-percentage="95">
+						        <img src="iconos/Blender.png" alt="Blender" class="bubble-logo">
+						        <div class="liquid">
+						          <div class="liquid-wave"></div> <!-- La ola está dentro del líquido -->
+						        </div>
+						      </div>
+						    </div>
+						    <!-- Burbuja 2 -->
+						    <div class="bubble-container">
+						      <div class="bubble" data-percentage="90">
+						        <img src="iconos/HTML.png" alt="HTML" class="bubble-logo">
+						        <div class="liquid">
+						          <div class="liquid-wave"></div>
+						        </div>
+						      </div>
+						    </div>
+						    <!-- Burbuja 3 -->
+						    <div class="bubble-container">
+						      <div class="bubble" data-percentage="90">
+						        <img src="iconos/XD.png" alt="XD" class="bubble-logo">
+						        <div class="liquid">
+						          <div class="liquid-wave"></div>
+						        </div>
+						      </div>
+						    </div>
+						    <!-- Burbuja 4 -->
+						    <div class="bubble-container">
+						      <div class="bubble" data-percentage="80">
+						        <img src="iconos/Premiere.png" alt="Premiere" class="bubble-logo">
+						        <div class="liquid">
+						          <div class="liquid-wave"></div>
+						        </div>
+						      </div>
+						    </div>
+						    <!-- Burbuja 5 -->
+						    <div class="bubble-container">
+						      <div class="bubble" data-percentage="70">
+						        <img src="iconos/After Effects.png" alt="After Effects" class="bubble-logo">
+						        <div class="liquid">
+						          <div class="liquid-wave"></div>
+						        </div>
+						      </div>
+						    </div>
+						    <!-- Burbuja 6 -->
+						    <div class="bubble-container">
+						      <div class="bubble" data-percentage="60">
+						        <img src="iconos/Photoshop.png" alt="Photoshop" class="bubble-logo">
+						        <div class="liquid">
+						          <div class="liquid-wave"></div>
+						        </div>
+						      </div>
+						    </div>
+						    <!-- Burbuja 7 -->
+						    <div class="bubble-container">
+						      <div class="bubble" data-percentage="45">
+						        <img src="iconos/Unity.png" alt="Unity" class="bubble-logo">
+						        <div class="liquid">
+						          <div class="liquid-wave"></div>
+						        </div>
+						      </div>
+						    </div>
+						    <!-- Burbuja 8 -->
+						    <div class="bubble-container">
+						      <div class="bubble" data-percentage="15">
+						        <img src="iconos/JS.png" alt="JS" class="bubble-logo">
+						        <div class="liquid">
+						          <div class="liquid-wave"></div>
+						        </div>
+						      </div>
+						    </div>
+						  </div>
+					</div>
+				</div>
+			</div>
+	</div>
+	<!-- FIN SEGUNDA SECCION -->
+
+	<!-- TERCERA SECCIÓN CON PROYECTOS -->
+	<div id="proyects" class="container-fluid">
+			<div class="row">
+				<div class="proyectos col-12 d-flex align-items-center justify-content-center">
+					<div class="container">
+						<h1 class="text-center mt-5 mb-5">PROYECTOS</h1>
+						<!--PRIMER CARRUSEL -->
+				    <div id="carouselExampleCaptions1" class="carousel slide" data-ride="carousel">
+				      <ol class="carousel-indicators">
+				        <li data-target="#carouselExampleCaptions1" data-slide-to="0" class="active"></li>
+				        <li data-target="#carouselExampleCaptions1" data-slide-to="1"></li>
+				        <li data-target="#carouselExampleCaptions1" data-slide-to="2"></li>
+				      </ol>
+				      <div class="carousel-inner">
+				        <div class="carousel-item active">
+				          <img src="Renders comprimidos/Gutiérrez_Abel_Mesita con dados-min.png" class="d-block w-100" alt="...">
+				          <div class="carousel-caption d-none d-md-block">
+				            <h5>Mesa de póker</h5>
+				            <p>Mesa de póker con dados y cartas, idónea para jugar al mentiroso.</p>
+				          </div>
+				        </div>
+				        <div class="carousel-item">
+				          <img src="Renders comprimidos/Casas bob esponja-min.png" class="d-block w-100" alt="...">
+				          <div class="carousel-caption d-none d-md-block">
+				            <h5>Fondo de bikini</h5>
+				            <p>Casa de Bob Esponja y sus amigos.</p>
+				          </div>
+				        </div>
+				        <div class="carousel-item">
+				          <img src="Renders comprimidos/Asta chibi-min.png" class="d-block w-100" alt="...">
+				          <div class="carousel-caption d-none d-md-block">
+				            <h5>Asta chibi</h5>
+				            <p>Protagonista del anime "Black Clover" en formato chibi agarrando su espada.</p>
+				          </div>
+				        </div>
+				      </div>
+				      <button class="carousel-control-prev" type="button" data-target="#carouselExampleCaptions1" data-slide="prev">
+				        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				        <span class="sr-only">Previous</span>
+				      </button>
+				      <button class="carousel-control-next" type="button" data-target="#carouselExampleCaptions1" data-slide="next">
+				        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+				        <span class="sr-only">Next</span>
+				      </button>
+				    </div>
+				    <br>
+				    <h1 class="text-center mt-5 mb-5">REMAKE DE SHREK</h1>
+				    <!-- SEGUNDO CARRUSEL -->
+				    <div id="carouselExampleCaptions2" class="carousel slide" data-ride="carousel">
+				      <ol class="carousel-indicators">
+				        <li data-target="#carouselExampleCaptions2" data-slide-to="0" class="active"></li>
+				        <li data-target="#carouselExampleCaptions2" data-slide-to="1"></li>
+				        <li data-target="#carouselExampleCaptions2" data-slide-to="2"></li>
+				        <li data-target="#carouselExampleCaptions2" data-slide-to="3"></li>
+				      </ol>
+				      <div class="carousel-inner">
+				        <div class="carousel-item active">
+				          <iframe width="100%" height="600px" src="https://www.youtube.com/embed/V3t4IfOTa9s" class="d-block w-100" title="Remake personal de la escena de la película de Shrek" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> 
+				          <div class="carousel-caption d-none d-md-block">
+				          </div>
+				        </div>
+				        <div class="carousel-item">
+				          <img src="Renders comprimidos/Render ciudad.png" class="d-block w-100" alt="...">
+				          <div class="carousel-caption d-none d-md-block">
+				            <h5>Paisaje de la cinemática</h5>
+				            <p>Vista completa de la ciudad de la cinemática de Shrek antes de entrar al castillo.</p>
+				          </div>
+				        </div>
+				        <div class="carousel-item">
+				          <img src="Renders comprimidos/Render tienda.png" class="d-block w-100" alt="...">
+				          <div class="carousel-caption d-none d-md-block">
+				            <h5>Tienda de juguetes</h5>
+				            <p>Tienda de juguetes visible en la cinemática con muñecos representativos al rey de Duloc.</p>
+				          </div>
+				        </div>
+				        <div class="carousel-item">
+				          <img src="Renders comprimidos/Render shrek-min.png" class="d-block w-100" alt="...">
+				          <div class="carousel-caption d-none d-md-block">
+				            <h5>Rig de Shrek</h5>
+				            <p>Rig de el modelo de Shrek que utilicé en la cinemática.</p>
+				          </div>
+				        </div>
+				      </div>
+				      <button class="carousel-control-prev" type="button" data-target="#carouselExampleCaptions2" data-slide="prev">
+				        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				        <span class="sr-only">Previous</span>
+				      </button>
+				      <button class="carousel-control-next" type="button" data-target="#carouselExampleCaptions2" data-slide="next">
+				        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+				        <span class="sr-only">Next</span>
+				      </button>
+				    </div>
+				    <h1 class="text-center mt-5 mb-5">OTROS PROYECTOS</h1>
+
+				    <iframe class="marcosyoutube" width="100%" height="600px" src="https://www.youtube.com/embed/IbItgSIdxf8" title="Teaser The Amazing Spiderman PS4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+				    <iframe class="marcosyoutube" width="100%" height="600px" src="https://www.youtube.com/embed/8JdufIfoxk0" title="Flexo de Disney Personalizado" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+				    <iframe class="marcosyoutube" width="100%" height="600px" src="https://www.youtube.com/embed/IXO9qgS-wTg" title="Martillo en la tormenta" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+				    <iframe class="marcosyoutube" width="100%" height="600px" src="https://www.youtube.com/embed/QCieKwBB3V4" title="Huggy wuggy en base a Suzane de Blender" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+				    <iframe class="marcosyoutube" width="100%" height="600px" src="https://www.youtube.com/embed/m1FYkFi1NSQ" title="Trabajo de luces y materiales FNAF" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+				  </div>
+				</div>
+			</div>
+	</div>
+	<!-- FIN TERCERA SECCION -->
+
+	<!-- FOOTER -->
+	<div class="formularios text-white pt-5 pb-5">
+	  <div class="container">
+	  	<div class="row">
+	    <!-- Formulario -->
+	    	<div id="contact" class="col-md-12">
+	      	<h1 class="text-uppercase text-center mb-4">CONTACTO</h1>
+	      	<form>
+	        <div class="form-row">
+	          <div class="form-group col-md-6">
+	            <!-- Nombre -->
+	            <label for="nombre">Nombre</label>
+	            <input type="text" class="form-control" id="nombre" placeholder="Escribe tu nombre">
+	        	</div>
+	        <div class="form-group col-md-6">
+	        	<!-- Correo -->
+	        	<label for="correo">Correo Electrónico</label>
+	        	<input type="email" class="form-control" id="correo" placeholder="Escribe tu correo">
+	        </div>
+	      </div>
+	      <div class="enviarformulario form-group col-12">
+	      <!-- Mensaje -->
+	      	<label for="mensaje">Mensaje</label>
+	        <textarea class="form-control" id="mensaje" rows="4" placeholder="Escribe tu mensaje aquí"></textarea>
+	      </div>
+	      <button type="submit" class=" btn btn-warning btn-block col-2 m-md-auto">Enviar</button>
+	      	</form>
+	     	</div>
+	   	</div>
+	 	</div>
+	</div>
+	<footer>
+    <div class="container">
+      <div class="footer-icons">
+        <!-- Iconos de redes sociales -->
+        <a href="https://www.youtube.com/@abelgutierrezgomez" target="_blank" aria-label="YouTube">
+          <i class="fa-brands fa-youtube"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/abel-guti%C3%A9rrez-0a62a1341/" target="_blank" aria-label="LinkedIn">
+          <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+      </div>
+      <p>© 2025 Abel Gutiérrez. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+	<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+	// ANIMACION NAV ESCONDERSE
+  $(document).ready(function () {
+    var prevScrollPos = $(window).scrollTop();
+    var navbar = $('#navbar');
+    var progressBarContainer = $('#progress-bar-container');
+    $(window).scroll(function () {
+      var currentScrollPos = $(window).scrollTop();
+
+      // Mostrar/ocultar navbar
+      if (prevScrollPos < currentScrollPos) {
+          navbar.css('top', '-100px');
+          progressBarContainer.css('top', '20px');
+      } else {
+        navbar.css('top', '0');
+        progressBarContainer.css('top', '120px');
+      }
+  // FIN ANIMACION NAV
+
+  // BARRA DE PROGRESO
+      var scrollTop = $(window).scrollTop();
+      var docHeight = $(document).height() - $(window).height();
+      var scrollPercent = (scrollTop / docHeight) * 100;
+      $('#progress-bar').css('width', scrollPercent + '%');
+
+        prevScrollPos = currentScrollPos;
+      });
+  });
+  // FIN BARRA PROGRESO
+
+  // BURBUJA
+  document.addEventListener('DOMContentLoaded', () => {
+      const bubbles = document.querySelectorAll('.bubble');
+      
+      bubbles.forEach(bubble => {
+        const percentage = bubble.getAttribute('data-percentage');
+        const liquid = bubble.querySelector('.liquid');
+        liquid.style.height = `${percentage}%`; // Ajusta el nivel del "líquido"
+      });
+    });
+  // FIN BURBUJA
+
+  // FORMULARIO
+  document.querySelector('form').addEventListener('submit', (e) => {
+	  e.preventDefault();
+	  const nombre = document.getElementById('nombre').value.trim();
+	  const correo = document.getElementById('correo').value.trim();
+	  const mensaje = document.getElementById('mensaje').value.trim();
+	  
+	  if (!nombre || !correo || !mensaje) {
+	    alert('Por favor, completa todos los campos.');
+	    return;
+	  }
+	  alert('¡Gracias por tu mensaje!');
+	});
+	// FIN FORMULARIO
+</script>
+
+</body>
+</html>
